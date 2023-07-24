@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    color: #fff;
+    --transition: .4s all ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff716c;
+}
+
+
+/* navigation  */
+#nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+#nav a i {
+    margin-right: 20px;
+}
+
+/* project details  */
+.project-details {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.project-details h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.project-details p {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.project-details .links {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-details .links a {
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+    transition: all .2s ease;
+    margin-bottom: 5px;
+    transform-origin: left;
+
+}
+
+.project-details .links a span {
+    font-size: 12px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.project-details .links a:hover {
+    color: #000;
+    scale: 1.3;
+}
+
+/* thanking   */
+
+.thanking {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+
+.thanking p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.thanking p i {
+    margin-left: 10px;
+}
+
+/* note  */
+.note {
+    position: absolute;
+    bottom: 20px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+/* button css  */
+#button-container {
+    width: 35%;
+    min-width: 250px;
+    height: 60%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 12px;
+}
+
+#button-container .button {
+    width: 50%;
+    min-width: 200px;
+    height: 75px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    border-radius: 50px;
+}
+
+#icon {
+    font-size: 30px;
+    font-weight: 800;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(139deg, #FE534E 30%, #F9D423 100%);
+    transition: var(--transition);
+    counter-reset: #fff;
+}
+
+#text {
+    transition: var(--transition);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#clickbutton {
+    background-color: #000;
+    color: #fff;
+
+    >p {
+        margin-left: 30px
+    }
+
+    ;
+}
+
+#hoverbutton {
+    border: 2px solid #000000;
+    overflow: hidden;
+
+    >p {
+        position: absolute;
+        z-index: 1;
+        color: #000000;
+    }
+}
+
+.hovercircle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    transition: var(--transition);
+    background: linear-gradient(134deg, #FBD3E9 0%, #BB377D 100%);
+    opacity: 0;
+
+}
+
+#hoverbutton:hover {
+    border: none;
+
+    >p {
+        color: #ffffff;
+
+    }
+
+    ;
+
+    .hovercircle {
+        opacity: 1;
+        width: 100%;
+        height: 200%;
+        background: linear-gradient(134deg, #FBD3E9 0%, #BB377D 100%);
+    }
+}
